@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="Nav">
+            <nav class="navbar navbar-expand-lg navbar-dark Navbar-style fixed-top">
+                <a class="navbar-brand" href="#"><img src="./images/BeSpoked.png" class="logo"></a>
+                <h1 class="nav-heading">BeSpoked Journeys</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ab" id="navbarNavAltMarkup">
+                  <div class="navbar-nav ml-auto ">
+                    <a href="#HomeSection" target="_self" class="Navbar-a">Home</a>
+                    <a href="#AboutUsSection" target="_self" class="Navbar-a">About Us</a>
+                    <a href="#WhyChooseUs" target="_self" class="Navbar-a">Why choose us?</a>
+                    <a href="#FeaturesSection" target="_self" class="Navbar-a">Features</a>
+                    <a href="#JoinUsSection" class="Navbar-a">Join Us</a>
+                    <a href="login.html" target="_self" class="Navbar-a">Login/Signin</a>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <section class="homesection-container" id="HomeSection">
+            <div class="homesection-description">
+                <h1 class="homesection-quote-heading">Travel Smart, Travel Spontaneous</h1>
+                <img src="./images/travel.jpg" class="travelimage">
+                <p class="homesection-description-para">Welcome to <span class="title">BeSpoked Journeys</span>, your ultimate travel companion! Whether you're exploring a new city or planning a dream vacation, our app takes the stress out of travel planning by creating a personalized and dynamic itinerary just for you.
+    
+                   <br><br> Simply provide your destination, travel dates, and budget, and let us handle the rest. We use real-time weather updates to ensure your trip is smooth and enjoyable. If the weather takes an unexpected turn, we’ll adjust your plan with alternative activities that fit your preferences and budget. Plus, we offer live currency conversions to keep your expenses in check, no matter where you're headed!
+                    
+                   <br> <br><span class="getReady-text">Get ready for an exciting journey where everything is planned to perfection—rain or shine!</span></p>
+            </div>
+            <div class="input-card">
+              <label for="location">Destination</label>
+              <input type="text" placeholder="Enter the city or place you plan to visit" id="location">
+              <label for="Date">Journey Date</label>
+              <input type="date" placeholder="Select the journey Date" id="Date">
+              <label for="amount">Amount to Convert</label>
+              <input type="text" placeholder="Enter the amount you wish to convert" id="amount">
+              
+              <label for="baseCurrency">Your Currency (Base)</label>
+              <input type="text" placeholder="Enter your currency code (e.g., INR for India)" id="baseCurrency">
+              
+              <label for="targetCurrency">Destination Currency</label>
+              <input type="text" placeholder="Enter the currency code for the destination (e.g., USD for USA)" id="targetCurrency">
+              
+              <button class="input-card-button" id="getPlanButton" onclick="getPlan()"><a  id="getplananchor" style="color:black;text-decoration: none;" target="_self">Get Plan</a></button>   
+                  
+          </div>
+        </section>
+    </div>
+    <section class="aboutus-section" id="AboutUsSection">
+      <h1 class="section-heading">About Us</h1>
+        <hr color="white">
+        <div class="aboutus-section-container">
+          <div class="aboutus-section-left">
+              <h2 class="side-headings">Your Ultimate Travel Companion</h2><br>
+              <p class="descriptions">At BeSpoked Journeys Planner, we believe that every journey should be an adventure, no matter the challenges. Whether it's an unexpected change in the weather or fluctuating exchange rates, we’re here to make sure your trip goes smoothly—so you can focus on creating unforgettable memories.</p>
+              <br><br>
+              <h2 class="side-headings">Our Mission: Making Travel Stress-Free and Dynamic</h2><br>
+              <p class="descriptions">We’re here to transform how you travel by providing a smart, intuitive tool that adapts to the world around you. Our app takes into account real-time weather changes, local currency conversions, and your personalized budget to deliver a fully dynamic travel plan, designed to fit your unique needs. We want to empower you to explore the world, free from the stress of constant planning.</p>
+          </div>
+          <div class="aboutus-section-right">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/img4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/img7.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/img9.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+          </div>
+      </div>
+    </section>
+    <section class="whyChooseUs" id="WhyChooseUs">
+      <h1 class="section-heading">Why Choose Us?</h1>
+      <hr color="#ffffff">
+      <div class="whyChooseUs-section-container">
+      <div class="whyChooseUs-img">
+        <center><img src="./images/img10.jpg" class="img10"></center>
+      </div>
+      <div class="whyChooseUs-section-description">
+          <h2 class="side-headings">What Makes Us Different</h2>
+          <p class="descriptions">At the core of BeSpoked Journey Planner is the promise of seamless adaptability. Our smart algorithms and real-time data integration provide:</p>
+          <ul class="unordered-list">
+              <li><span class="list-headings">Dynamic Itineraries:</span> Travel plans that change as your circumstances do. If it rains at your destination, we’ll suggest an indoor museum instead of that outdoor hike.</li>
+              <li><span class="list-headings">Real-Time Currency Conversion:</span> Your budget travels with you. We convert your funds to the local currency of your destination, so you always know how much you can spend—whether you’re in Tokyo, Paris, or Cape Town.</li>
+              <li><span class="list-headings">Personalized Travel:</span> We get to know your travel preferences, from the kind of food you love to your preferred pace, ensuring each itinerary feels uniquely yours.</li>
+          </ul>
+          <br>
+          <h2 class="side-headings">Our Vision for the Future</h2>
+          <p class="descriptions">We’re not just building an app—we’re shaping the future of travel. BeSpoked Journey Planner will continue to evolve, with upcoming features that include:</p>
+          <ul class="unordered-list">
+              <li><span class="list-headings">Local Experiences:</span> Discover hidden gems and local events curated just for you.</li>
+              <li><span class="list-headings">Real-Time Alerts:</span> Get instant updates on weather changes, traffic, and even local deals.</li>
+              <li><span class="list-headings">Interactive Budget Tracking:</span>Adjust your spending on the go with personalized recommendations.</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+  <section class="featuresSection" id="FeaturesSection">
+    <h1 class="section-heading">Features</h1>
+    <hr color="#ffffff">
+    <div class="featuresSection-container">
+        <div class="featuresSection-left ">
+            <ul>
+                <li class="featuresSection-list-heading">Dynamic Itineraries: Plans That Evolve With You</li>
+                <p class="featuresSection-list-description">Your trip shouldn’t be restricted by a fixed schedule. Our<span class="hilight"> real-time itineraries </span>adjust automatically to changes in the weather, your preferences, and even spontaneous opportunities. Rainy day? We’ll switch to indoor attractions. Surprise festival nearby? We’ll add it to your plan.<br>
+
+                    <span class="hilight">Why It’s Amazing:</span> You get a trip that evolves with the moment—<span class="hilight">no stress, no hassle.</span></p>
+                <li class="featuresSection-list-heading"> Real-Time Weather Integration: Be Prepared, Always</li>
+                <p class="featuresSection-list-description">You’ll never have to worry about being caught off guard by bad weather again. We provide<span class="hilight"> live weather updates</span> for your destination, and when conditions change, so do your plans. Sunny? We’ll suggest outdoor adventures. Stormy? How about a cozy museum or café?
+
+                  <br><span class="hilight"></span>  Why It’s Amazing: You’ll always stay one step ahead of the weather, ensuring <span class="hilight">perfectly timed activities.</span></p>
+                <li class="featuresSection-list-heading"> Instant Currency Conversion: Spend Smart, Travel Smart</li>
+                <p class="featuresSection-list-description">Traveling across borders? No problem! Our<span class="hilight"> instant currency converter</span> tracks exchange rates, ensuring your budget works seamlessly across different countries. Whether you’re in New York or New Delhi, you’ll know exactly what you can spend in the local currency—<span class="hilight">down to the last penny.</span>
+
+                 <br>  <span class="hilight"> Why It’s Amazing:</span> You’ll never overspend, and you can manage your money with <span class="hilight">total confidence.</span></p>
+            </ul>
+        </div>
+        <div class="featuresSection-right ">
+            <ul>
+                <li class="featuresSection-list-heading"> Live Travel Alerts: Stay Updated, Stay Flexible</li>
+                <p class="featuresSection-list-description">We keep you informed with <span class="hilight">real-time notifications</span> about anything that could affect your trip—flight delays, traffic jams, or even last-minute event opportunities. If something changes, we’ll adjust your itinerary instantly to keep your adventure on track.
+
+                   <br> <span class="hilight">Why It’s Amazing:</span> You’ll stay in control of your journey, no matter what happens—<span class="hilight">ready for anything.</span></p>
+                <li class="featuresSection-list-heading">Discover Hidden Gems: Travel Like a Local</li>
+                <p class="featuresSection-list-description">Our app goes beyond the usual tourist traps, offering personalized recommendations based on your interests. Explore<span class="hilight"> hidden gems</span>—like secret beaches, family-run restaurants, or local festivals—that other travelers might miss. It’s like having a local guide in your pocket.
+
+                   <br> <span class="hilight">Why It’s Amazing:</span> You’ll experience each destination authentically, with <span class="hilight">unique, off-the-beaten-path adventures.</span></p>
+                <li class="featuresSection-list-heading">Smart Budget Planning: Perfect Plans, Every Time</li>
+                <p class="featuresSection-list-description">Whether you’re splurging or saving, we help you plan a trip that stays within your budget. Enter your spending limit, and we’ll provide recommendations that balance cost and experience. You’ll get the best value, no matter how much you’re working with.
+
+                   <br><span class="hilight"> Why It’s Amazing:</span> You’ll have an <span class="hilight">unforgettable trip without breaking the bank.</span></p>
+            </ul>
+        </div>
+    </div>
+    <div class="featuresSection-second-container">
+        <div class="image">
+            <img src="./images/img11.jpg" class="featuresSection-image">
+        </div>
+        <div class="how-it-works">
+            <h1 class="how-it-works-heading">How it works?</h1>
+            <ol class="ordered-list">
+                <li>Enter Your Travel Details: Tell us where you’re headed, when, and your budget.</li>
+                <li>Get a Tailored Itinerary: Based on your preferences, budget, and the weather, we’ll create a dynamic plan.</li>
+                <li>Enjoy the Journey: With real-time updates and smart suggestions, your trip adjusts on the fly to ensure a flawless experience.</li>
+                <li>Explore Stress-Free: We handle the updates and changes so you can focus on exploring!</li>
+            </ol>
+        </div>
+    </div>
+  </section>
+  <section class="joinus-section" id="JoinUsSection">
+    <h1 class="section-heading joinus-color">Join Us</h1>
+    <hr color="#000000">
+    <div class="joinus-section-container">
+        <h2 class="side-headings joinus-color">Join Us on This Journey</h2><br>
+        <p class="joinus-section-description joinus-color">We’re excited to be part of your next adventure. Whether you’re exploring new cities or revisiting old favorites,<span class="join-us-hilight"> BeSpoked Journey Planner</span> is here to make your travels smoother, more enjoyable, and stress-free.
+            <br><br>
+            Ready to explore the world without limits? Start planning your trip today, and let us take care of the rest.</p>
+        <h1 class="Followus-heading side-headings joinus-color">Follow Us On</h1>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="follow-us-icon-container">
+              <i class="fab fa-twitter icon fa-2x" ></i>
+            </div>
+            <div class="follow-us-icon-container">
+              <i class="fab fa-instagram icon fa-2x"></i>
+            </div>
+            <div class="follow-us-icon-container">
+              <i class="fab fa-facebook icon fa-2x"></i>
+            </div>
+          </div>
+    </div>
+  </section>
+  <div class="footer-section pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img
+            src="./images/BeSpoked.png"
+            class="BeSpokedJourney-logo"
+          />
+          <h2 class="copyright"><i class="fa-regular fa-copyright"></i> 2024 BeSpoked Journeys. All Rights Reserved.</h2>
+          <h1 class="footer-section-mail-id">explore@bespokedjourneys.com</h1>
+          <p class="footer-section-address">
+            123 Ayur Vigyan Nagar, New Delhi, India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
